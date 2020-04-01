@@ -1,0 +1,70 @@
+cmake_minimum_required(VERSION 3.15)
+project(UDR)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(src)
+include_directories(udt/app)
+include_directories(udt/src)
+include_directories(udt/ssl)
+include_directories(udt/tuner)
+
+add_executable(UDR
+        src/cc.h
+        src/crypto.h
+        src/udr.cpp
+        src/udr_log.cpp
+        src/udr_options.cpp
+        src/udr_options.h
+        src/udr_threads.cpp
+        src/udr_threads.h
+        src/udr_util.cpp
+        src/udr_util.h
+        udt/app/appclient.cpp
+        udt/app/appserver.cpp
+        udt/app/cc.h
+        udt/app/recvfile.cpp
+        udt/app/sendfile.cpp
+        udt/app/test.cpp
+        udt/app/udcat_client.cpp
+        udt/app/udcat_common.cpp
+        udt/app/udcat_common.h
+        udt/app/udcat_server.cpp
+        udt/src/api.cpp
+        udt/src/api.h
+        udt/src/buffer.cpp
+        udt/src/buffer.h
+        udt/src/cache.cpp
+        udt/src/cache.h
+        udt/src/ccc.cpp
+        udt/src/ccc.h
+        udt/src/channel.cpp
+        udt/src/channel.h
+        udt/src/common.cpp
+        udt/src/common.h
+        udt/src/core.cpp
+        udt/src/core.h
+        udt/src/epoll.cpp
+        udt/src/epoll.h
+        udt/src/list.cpp
+        udt/src/list.h
+        udt/src/md5.cpp
+        udt/src/md5.h
+        udt/src/packet.cpp
+        udt/src/packet.h
+        udt/src/queue.cpp
+        udt/src/queue.h
+        udt/src/udt.h
+        udt/src/window.cpp
+        udt/src/window.h
+        udt/ssl/e_os.h
+        udt/ssl/epoll.cpp
+        udt/ssl/tls_client.cpp
+        udt/ssl/tls_common.cpp
+        udt/ssl/tls_common.h
+        udt/ssl/tls_server.cpp
+        udt/tuner/appclient.cpp
+        udt/tuner/appserver.cpp
+        udt/tuner/cc.h
+        udt/tuner/recvfile.cpp
+        udt/tuner/sendfile.cpp)
