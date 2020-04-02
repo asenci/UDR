@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -d ../.git ]; then git describe --tags --long > version ; fi;
+if [ -d ../.git ]; then git describe --tags > version ; fi;
 
 version=`cat version`
 
