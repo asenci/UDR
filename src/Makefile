@@ -33,8 +33,8 @@ ifeq ($(os), UNIX)
 endif
 
 ifeq ($(os), OSX)
-   LDFLAGS += -I/usr/local/opt/libudt/include/udt -L/usr/local/opt/libudt/lib
-   CCFLAGS += -I/usr/local/opt/libudt/include/udt
+   LDFLAGS += -I/usr/local/opt/libudt/include -L/usr/local/opt/libudt/lib
+   CCFLAGS += -I/usr/local/opt/libudt/include
 
    LDFLAGS += -I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib
    CCFLAGS += -I/usr/local/opt/openssl/include
