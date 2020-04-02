@@ -1,4 +1,4 @@
-DIRS = udt src
+DIRS = src
 TARGETS = all clean
 
 $(TARGETS): %: $(patsubst %, %.%, $(DIRS))
